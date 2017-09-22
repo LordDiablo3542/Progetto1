@@ -69,7 +69,7 @@
         <task id="82" name="Test del programma" meeting="false" start="2017-09-29" duration="5" complete="0" expand="false">
             <task id="48" name="Test" meeting="false" start="2017-09-29" duration="5" complete="0" expand="true"/>
         </task>
-        <task id="87" name="Documentazioene" meeting="false" start="2017-08-25" duration="10" complete="0" expand="true">
+        <task id="87" name="Documentazioene" meeting="false" start="2017-08-25" duration="10" complete="0" expand="false">
             <task id="91" name="Documentazione" meeting="false" start="2017-09-29" duration="5" complete="0" expand="true"/>
             <task id="92" name="Diario" meeting="false" start="2017-08-25" duration="10" complete="0" expand="true"/>
         </task>
