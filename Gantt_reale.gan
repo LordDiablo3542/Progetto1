@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt" company="" webLink="http://" view-date="2017-08-16" view-index="0" gantt-divider-location="473" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt" company="" webLink="http://" view-date="2017-08-06" view-index="0" gantt-divider-location="473" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:0" id="gantt-chart">
         <field id="tpd3" name="Nome" width="259" order="0"/>
@@ -99,9 +99,9 @@
             <task id="303" name="Test raccolta dati" meeting="false" start="2017-10-06" duration="1" complete="0" expand="true"/>
             <task id="48" name="Beta test" color="#8cb6ce" shape="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1" meeting="false" start="2017-10-13" duration="2" complete="0" expand="true"/>
         </task>
-        <task id="87" name="Documentazioene" meeting="false" start="2017-08-25" duration="10" complete="33" expand="true">
+        <task id="87" name="Documentazioene" meeting="false" start="2017-08-25" duration="10" complete="40" expand="true">
             <task id="91" name="Documentazione" meeting="false" start="2017-09-29" duration="5" complete="0" expand="true"/>
-            <task id="92" name="Diario" meeting="false" start="2017-08-25" duration="10" complete="50" expand="true"/>
+            <task id="92" name="Diario" meeting="false" start="2017-08-25" duration="10" complete="60" expand="true"/>
         </task>
         <task id="208" name="consegna" color="#8cb6ce" meeting="true" start="2017-10-27" duration="0" complete="0" expand="true"/>
     </tasks>
