@@ -66,14 +66,14 @@
             <task id="254" name="Interfaccia grafica" meeting="false" start="2017-09-29" duration="1" complete="0" expand="true"/>
             <task id="262" name="Analisi formato dati" meeting="false" start="2017-09-29" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="83" name="Implemanetazione" meeting="false" start="2017-09-15" duration="6" complete="19" expand="true">
+        <task id="83" name="Implemanetazione" meeting="false" start="2017-09-15" duration="6" complete="25" expand="true">
             <task id="19" name="Installazione SO" color="#8cb6ce" meeting="false" start="2017-09-15" duration="3" complete="100" expand="true">
                 <depend id="23" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="23" name="Instalazione apche + php" color="#8cb6ce" meeting="false" start="2017-10-06" duration="2" complete="25" expand="true">
+            <task id="23" name="Instalazione apche + php" color="#8cb6ce" meeting="false" start="2017-10-06" duration="1" complete="100" expand="true">
                 <depend id="228" type="2" difference="-1" hardness="Strong"/>
             </task>
-            <task id="228" name="ambiente finito" color="#8cb6ce" meeting="true" start="2017-10-13" duration="0" complete="0" expand="true"/>
+            <task id="228" name="ambiente finito" color="#8cb6ce" meeting="true" start="2017-10-06" duration="0" complete="0" expand="true"/>
             <task id="63" name="Aggiunta form nel php" meeting="false" start="2017-10-06" duration="1" complete="0" expand="true">
                 <depend id="69" type="2" difference="-1" hardness="Strong"/>
             </task>
@@ -89,7 +89,7 @@
             </task>
             <task id="160" name="Tabella riassuntiva sul sito" color="#8cb6ce" shape="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1" meeting="false" start="2017-10-13" duration="2" complete="0" priority="0" expand="true"/>
             <task id="273" name="sito funzionante su infomaniak" color="#8cb6ce" meeting="true" start="2017-10-27" duration="0" complete="0" expand="true"/>
-            <task id="195" name="Design" meeting="false" start="2017-09-29" duration="4" complete="0" expand="true"/>
+            <task id="195" name="Design" meeting="false" start="2017-10-06" duration="3" complete="0" expand="true"/>
         </task>
         <task id="82" name="Test del programma" meeting="false" start="2017-09-15" duration="6" complete="0" expand="false">
             <task id="275" name="Test VM" meeting="false" start="2017-09-15" duration="2" complete="0" expand="true"/>
