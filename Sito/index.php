@@ -5,6 +5,7 @@
 	<style type="text/css">
 		body {
 			margin: 0px;
+			font-family: "Arial", sens-serif;
 		}
 		th {
 			text-align: right;
@@ -13,14 +14,17 @@
 		td {
 			padding-left: 15px;
 		}
-		div {
+		div{
 			background-color: DodgerBlue;
 			height: 100px;
 			margin: 0px;
 		}
 		th,td {
-			font-family: "Arial", sens-serif;
 			padding-top: 20px;
+		}
+		#bottom {
+			text-align: center;
+
 		}
 	</style>
 </head>
@@ -31,10 +35,10 @@
 	<form action="index.php" method="post">
 		<table style="width: 100%">
 			<tr>
-				<th style="width: 50%; border: black solid">
+				<th>
 					Nome :
 				</th>
-				<td  style="width: 50%; border: black solid">
+				<td>
 					<input type="text" name="nome">
 				</td>
 			</tr>
@@ -89,9 +93,9 @@
 			</tr>
 		</table>
 	</form>
-	<bottom>
+	<div id="bottom">
 		&copy elia.manassero
-	</bottom>
+	</div>
 	<?php
 	
 	?>
