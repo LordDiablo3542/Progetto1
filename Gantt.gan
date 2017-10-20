@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt" company="" webLink="http://" view-date="2017-07-31" view-index="0" gantt-divider-location="473" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt" company="" webLink="http://" view-date="2017-08-03" view-index="0" gantt-divider-location="473" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:0" id="gantt-chart">
         <field id="tpd3" name="Nome" width="264" order="0"/>
@@ -66,7 +66,7 @@
             <task id="254" name="Interfaccia grafica" meeting="false" start="2017-09-29" duration="1" complete="0" expand="true"/>
             <task id="262" name="Analisi formato dati" meeting="false" start="2017-09-29" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="83" name="Implemanetazione" meeting="false" start="2017-09-15" duration="6" complete="25" expand="true">
+        <task id="83" name="Implemanetazione" meeting="false" start="2017-09-15" duration="7" complete="23" expand="true">
             <task id="19" name="Installazione SO" color="#8cb6ce" meeting="false" start="2017-09-15" duration="3" complete="100" expand="true">
                 <depend id="23" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -77,18 +77,18 @@
             <task id="63" name="Aggiunta form nel php" meeting="false" start="2017-10-06" duration="1" complete="0" expand="true">
                 <depend id="69" type="2" difference="-1" hardness="Strong"/>
             </task>
-            <task id="69" name="Controlli dati" color="#8cb6ce" meeting="false" start="2017-10-06" duration="2" complete="0" expand="true">
+            <task id="69" name="Controlli dati" color="#8cb6ce" meeting="false" start="2017-10-06" duration="3" complete="0" expand="true">
                 <depend id="160" type="2" difference="-1" hardness="Strong"/>
                 <depend id="263" type="2" difference="-1" hardness="Strong"/>
             </task>
-            <task id="263" name="salvataggio dati" color="#8cb6ce" meeting="false" start="2017-10-13" duration="1" complete="0" expand="true">
+            <task id="263" name="salvataggio dati" color="#8cb6ce" meeting="false" start="2017-10-20" duration="1" complete="0" expand="true">
                 <depend id="158" type="2" difference="-1" hardness="Strong"/>
             </task>
-            <task id="158" name="Poter scaricare il CSV" color="#8cb6ce" meeting="false" start="2017-10-13" duration="1" complete="0" expand="true">
+            <task id="158" name="Poter scaricare il CSV" color="#8cb6ce" meeting="false" start="2017-10-20" duration="1" complete="0" expand="true">
                 <depend id="273" type="2" difference="1" hardness="Strong"/>
             </task>
-            <task id="160" name="Tabella riassuntiva sul sito" color="#8cb6ce" shape="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1" meeting="false" start="2017-10-13" duration="2" complete="0" priority="0" expand="true"/>
-            <task id="273" name="sito funzionante su infomaniak" color="#8cb6ce" meeting="true" start="2017-10-27" duration="0" complete="0" expand="true"/>
+            <task id="160" name="Tabella riassuntiva sul sito" color="#8cb6ce" shape="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1" meeting="false" start="2017-10-20" duration="2" complete="0" priority="0" expand="true"/>
+            <task id="273" name="sito funzionante su infomaniak" color="#8cb6ce" meeting="true" start="2017-11-03" duration="0" complete="0" expand="true"/>
             <task id="195" name="Design" meeting="false" start="2017-10-06" duration="3" complete="0" expand="true"/>
         </task>
         <task id="82" name="Test del programma" meeting="false" start="2017-09-15" duration="6" complete="0" expand="false">
