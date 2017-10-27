@@ -240,7 +240,7 @@
 				<tr>
 					<th>
 						Numero di cellulare :<br>
-						(non obligatoro)
+						(non obbligatorio)
 					</th>
 					<td valign="top">
 						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>">
@@ -249,7 +249,7 @@
 				<tr>
 					<th>
 						Numero di telefono di casa :<br>
-						(non obligatoro)
+						(non obbligatorio)
 					</th>
 					<td valign="top">
 						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>">
@@ -343,7 +343,7 @@
 				<tr>
 					<th>
 						Numero di cellulare :<br>
-						(non obligatoro)
+						(non obbligatorio)
 					</th>
 					<td valign="top">
 						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" class="min">
@@ -352,7 +352,7 @@
 				<tr>
 					<th>
 						Numero di telefono di casa :<br>
-						(non obligatoro)
+						(non obbligatorio)
 					</th>
 					<td valign="top">
 						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" class="min">
