@@ -239,18 +239,20 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :
+						Numero di cellulare :<br>
+						(non obligatoro)
 					</th>
-					<td>
-						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>" required pattern="^\d+$">
+					<td valign="top">
+						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :
+						Numero di telefono di casa :<br>
+						(non obligatoro)
 					</th>
-					<td>
-						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>" required pattern="^\d+$">
+					<td valign="top">
+						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>">
 					</td>
 				</tr>
 				<tr>
@@ -340,18 +342,20 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :
+						Numero di cellulare :<br>
+						(non obligatoro)
 					</th>
-					<td>
-						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" required pattern="^\d+$" class="min">
+					<td valign="top">
+						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" class="min">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :
+						Numero di telefono di casa :<br>
+						(non obligatoro)
 					</th>
-					<td>
-						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" required pattern="^\d+$" class="min">
+					<td valign="top">
+						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" class="min">
 					</td>
 				</tr>
 				<tr>
