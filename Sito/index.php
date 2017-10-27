@@ -3,10 +3,23 @@
 <head>
 	<title>Espoprofessioni</title>
 	<style type="text/css">
-		
+		a{
+			text-decoration: none;
+		}
+
+		.button {
+			width: 80px;
+			border: none;
+			background-color: #00e6ac;
+			color: white;
+			border-radius: 5px;
+			padding: 3px 0px;
+			font-size: 18px;
+		}
 		body {
 			margin: 0px;
 			font-family: "Arial", sens-serif;
+			background-color: #f6fff6;
 		}
 		table {
 			padding-bottom: 15px;
@@ -50,7 +63,7 @@
 		}
 	</style>
 </head>
-<body onload="ifMinorenne(), situazioneAttuale(), aprendistato()">
+<body onload="ifMinorenne(), aprendistato(), situazioneAttuale()">
 
 	<?php
 		$osservazioni = $nome = $cognome = $sesso = $dnascita = $email = $via = $citta = $cap =$nazione = $nCellulare = $nTelefono = $cantone ="";
@@ -62,7 +75,7 @@
 		$prof = $scuola = $sede = $annoS = $liv = $annoA = $professione = "";
 
 		$nazione = $nazioneP = $nazionalita = "Svizzera";
-		$cantone = "Ticino";
+		$cantone = $cantoneP = "Ticino";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$nome = test_input($_POST["nome"]);
@@ -124,7 +137,7 @@
 			$prof = $scuola = $sede = $annoS = $liv = $annoA = $professione = "";
 
 			$nazione = $nazioneP = $nazionalita = "Svizzera";
-			$cantone = "Ticino";
+			$cantone = $cantoneP = "Ticino";
 		}
 
 		function test_input($data) {
@@ -167,7 +180,7 @@
 						 Data di nascita (gg-mm-aaaa):
 					</th>
 					<td>
-						<input type="text" id="data" name="dnascita" value="<?php echo $dnascita?>" placeholder="gg-mm-aaaa" required pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" onchange="ifMinorenne()">
+						<input type="text" id="data" name="dnascita" value="<?php echo $dnascita?>" placeholder="gg-mm-aaaa" required pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" onchange="ifMinorenne()" title="gg-mm-aaaa">
 					</td>
 				</tr>
 				<tr>
@@ -201,7 +214,7 @@
 						CAP :
 					</th>
 					<td>
-						<input type="text" name="cap" value="<?php echo $cap?>" required pattern="^\d+$">
+						<input type="text" name="cap" value="<?php echo $cap?>" required pattern="^\d+$" title="solo numeri">
 					</td>
 				</tr>
 				<tr>
@@ -230,18 +243,20 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :
+						Numero di cellulare :<br>
+						(non obligatorio)
 					</th>
-					<td>
-						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>" required pattern="^\d+$">
+					<td valign="top">
+						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :
+						Numero di telefono di casa :<br>
+						(non obligatorio)
 					</th>
-					<td>
-						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>" required pattern="^\d+$">
+					<td valign="top">
+						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>">
 					</td>
 				</tr>
 				<tr>
@@ -249,7 +264,7 @@
 						 E-mail :
 					</th>
 					<td>
-						<input type="text" name="email" value="<?php echo $email?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+						<input type="text" name="email" value="<?php echo $email?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="xxx@yyy.zz">
 					</td>
 				</tr>
 			</table>
@@ -302,7 +317,7 @@
 						CAP :
 					</th>
 					<td>
-						<input type="text" name="capP" value="<?php echo $capP?>" required pattern="^\d+$" class="min">
+						<input type="text" name="capP" value="<?php echo $capP?>" required pattern="^\d+$" class="min" title="solo numeri">
 					</td>
 				</tr>
 				<tr>
@@ -331,18 +346,20 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :
+						Numero di cellulare :<br>
+						(non obligatorio)
 					</th>
-					<td>
-						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" required pattern="^\d+$" class="min">
+					<td valign="top">
+						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" class="min">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :
+						Numero di telefono di casa :<br>
+						(non obligatorio)
 					</th>
-					<td>
-						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" required pattern="^\d+$" class="min">
+					<td valign="top">
+						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" class="min">
 					</td>
 				</tr>
 				<tr>
@@ -350,7 +367,7 @@
 						 E-mail :
 					</th>
 					<td>
-						<input type="text" name="emailP" value="<?php echo $emailP?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="min">
+						<input type="text" name="emailP" value="<?php echo $emailP?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="min" title="xxx@yyy.zz">
 					</td>
 				</tr>
 			</table>
@@ -391,10 +408,10 @@
 				</tr>
 				<tr>
 					<th>
-						Anno :
+						Ultimo anno :
 					</th>
 					<td>
-						<input type="text" name="annoUS" value="<?php echo $annoUS?>" required pattern="[0-9]{4}">
+						<input type="text" name="annoUS" value="<?php echo $annoUS?>" required pattern="[0-9]{4}"  placeholder="aaaa" title="solo 4 cifre">
 					</td>
 				</tr>
 			</table>
@@ -447,7 +464,7 @@
 						Anno aprendistato :
 					</th>
 					<td>
-						<input type="text" name="annoA" value="<?php echo $annoA?>" required pattern="[0-9]" class="lav">
+						<input type="text" name="annoA" value="<?php echo $annoA?>" required pattern="[1-9]" class="lav" title="valori da 1 a 9">
 					</td>
 				</tr>
 			</table>
@@ -474,7 +491,7 @@
 						Anno scolastico :
 					</th>
 					<td>
-						<input type="text" name="annoS" value="<?php echo $annoS?>" required pattern="[0-9]" class="stu">
+						<input type="text" name="annoS" value="<?php echo $annoS?>" required pattern="[1-9]" class="stu" title="valori da 1 a 9">
 					</td>
 				</tr>
 			</table>
@@ -494,8 +511,11 @@
 				
 				<tr>
 					<td></td>
-					<td>
-						<input type="submit" name="submit" value="Invia">  
+					<td style="text-align: right; padding-left: 0px;">
+						<input class="button" type="submit" name="submit" value="Invia">
+						<a href="dati.csv" download>
+							<input class="button" type="button" name="submit" value="Scarica">
+						</a>
 					</td>
 				</tr>
 			</table>
@@ -525,6 +545,20 @@
 			}
 		}
 
+		function aprendistato(){
+			var d = document.getElementsByName("liv");
+			var cl = document.getElementsByClassName("lav")[4];
+			var dl = document.getElementById("lav");
+			if(d[0].checked){
+				cl.disabled = false;
+				dl.style.color = "black";
+			}
+			else{
+				cl.disabled = true;
+				dl.style.color = "#CCCCCC";
+			}
+		}
+
 		function situazioneAttuale(){
 			var l = document.getElementById("lavoro");
 			var cl = document.getElementsByClassName("lav");
@@ -550,20 +584,6 @@
 				}
 				l.style.display = "block";
 				s.style.display = "none";
-			}
-		}
-
-		function aprendistato(){
-			var d = document.getElementsByName("liv");
-			var cl = document.getElementsByClassName("lav")[4];
-			var dl = document.getElementById("lav");
-			if(d[0].checked){
-				cl.disabled = false;
-				dl.style.color = "black";
-			}
-			else{
-				cl.disabled = true;
-				dl.style.color = "#CCCCCC";
 			}
 		}
 	</script>
