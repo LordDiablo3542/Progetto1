@@ -3,10 +3,6 @@
 <head>
 	<title>Espoprofessioni</title>
 	<style type="text/css">
-		a{
-			text-decoration: none;
-		}
-
 		.button {
 			width: 80px;
 			border: none;
@@ -63,7 +59,7 @@
 		}
 	</style>
 </head>
-<body onload="ifMinorenne(), aprendistato(), situazioneAttuale()">
+<body onload="ifMinorenne(), situazioneAttuale(), aprendistato()">
 
 	<?php
 		$osservazioni = $nome = $cognome = $sesso = $dnascita = $email = $via = $citta = $cap =$nazione = $nCellulare = $nTelefono = $cantone ="";
@@ -75,7 +71,7 @@
 		$prof = $scuola = $sede = $annoS = $liv = $annoA = $professione = "";
 
 		$nazione = $nazioneP = $nazionalita = "Svizzera";
-		$cantone = $cantoneP = "Ticino";
+		$cantone = "Ticino";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$nome = test_input($_POST["nome"]);
@@ -137,7 +133,7 @@
 			$prof = $scuola = $sede = $annoS = $liv = $annoA = $professione = "";
 
 			$nazione = $nazioneP = $nazionalita = "Svizzera";
-			$cantone = $cantoneP = "Ticino";
+			$cantone = "Ticino";
 		}
 
 		function test_input($data) {
@@ -180,7 +176,7 @@
 						 Data di nascita (gg-mm-aaaa):
 					</th>
 					<td>
-						<input type="text" id="data" name="dnascita" value="<?php echo $dnascita?>" placeholder="gg-mm-aaaa" required pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" onchange="ifMinorenne()" title="gg-mm-aaaa">
+						<input type="text" id="data" name="dnascita" value="<?php echo $dnascita?>" placeholder="gg-mm-aaaa" required pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" onchange="ifMinorenne()">
 					</td>
 				</tr>
 				<tr>
@@ -214,7 +210,7 @@
 						CAP :
 					</th>
 					<td>
-						<input type="text" name="cap" value="<?php echo $cap?>" required pattern="^\d+$" title="solo numeri">
+						<input type="text" name="cap" value="<?php echo $cap?>" required pattern="^\d+$">
 					</td>
 				</tr>
 				<tr>
@@ -243,20 +239,18 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :<br>
-						(non obligatorio)
+						Numero di cellulare :
 					</th>
-					<td valign="top">
-						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>">
+					<td>
+						<input type="text" name="nCellulare" value="<?php echo $nCellulare?>" required pattern="^\d+$">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :<br>
-						(non obligatorio)
+						Numero di telefono di casa :
 					</th>
-					<td valign="top">
-						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>">
+					<td>
+						<input type="text" name="nTelefono" value="<?php echo $nTelefono?>" required pattern="^\d+$">
 					</td>
 				</tr>
 				<tr>
@@ -264,7 +258,7 @@
 						 E-mail :
 					</th>
 					<td>
-						<input type="text" name="email" value="<?php echo $email?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="xxx@yyy.zz">
+						<input type="text" name="email" value="<?php echo $email?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
 					</td>
 				</tr>
 			</table>
@@ -317,7 +311,7 @@
 						CAP :
 					</th>
 					<td>
-						<input type="text" name="capP" value="<?php echo $capP?>" required pattern="^\d+$" class="min" title="solo numeri">
+						<input type="text" name="capP" value="<?php echo $capP?>" required pattern="^\d+$" class="min">
 					</td>
 				</tr>
 				<tr>
@@ -346,20 +340,18 @@
 				</tr>
 				<tr>
 					<th>
-						Numero di cellulare :<br>
-						(non obligatorio)
+						Numero di cellulare :
 					</th>
-					<td valign="top">
-						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" class="min">
+					<td>
+						<input type="text" name="nCellulareP" value="<?php echo $nCellulareP?>" required pattern="^\d+$" class="min">
 					</td>
 				</tr>
 				<tr>
 					<th>
-						Numero di telefono di casa :<br>
-						(non obligatorio)
+						Numero di telefono di casa :
 					</th>
-					<td valign="top">
-						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" class="min">
+					<td>
+						<input type="text" name="nTelefonoP" value="<?php echo $nTelefonoP?>" required pattern="^\d+$" class="min">
 					</td>
 				</tr>
 				<tr>
@@ -367,7 +359,7 @@
 						 E-mail :
 					</th>
 					<td>
-						<input type="text" name="emailP" value="<?php echo $emailP?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="min" title="xxx@yyy.zz">
+						<input type="text" name="emailP" value="<?php echo $emailP?>"  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="min">
 					</td>
 				</tr>
 			</table>
@@ -408,10 +400,10 @@
 				</tr>
 				<tr>
 					<th>
-						Ultimo anno :
+						Anno :
 					</th>
 					<td>
-						<input type="text" name="annoUS" value="<?php echo $annoUS?>" required pattern="[0-9]{4}"  placeholder="aaaa" title="solo 4 cifre">
+						<input type="text" name="annoUS" value="<?php echo $annoUS?>" required pattern="[0-9]{4}">
 					</td>
 				</tr>
 			</table>
@@ -438,7 +430,7 @@
 
 			<table id="lavoro">
 				<tr>
-					<th  style="width: 30%">
+					<th>
 						Professione :
 					</th>
 					<td>
@@ -464,14 +456,14 @@
 						Anno aprendistato :
 					</th>
 					<td>
-						<input type="text" name="annoA" value="<?php echo $annoA?>" required pattern="[1-9]" class="lav" title="valori da 1 a 9">
+						<input type="text" name="annoA" value="<?php echo $annoA?>" required pattern="[0-9]" class="lav">
 					</td>
 				</tr>
 			</table>
 
 			<table id="studente">
 				<tr>
-					<th style="width: 30%">
+					<th>
 						Scuola :
 					</th>
 					<td>
@@ -491,7 +483,7 @@
 						Anno scolastico :
 					</th>
 					<td>
-						<input type="text" name="annoS" value="<?php echo $annoS?>" required pattern="[1-9]" class="stu" title="valori da 1 a 9">
+						<input type="text" name="annoS" value="<?php echo $annoS?>" required pattern="[0-9]" class="stu">
 					</td>
 				</tr>
 			</table>
@@ -529,33 +521,22 @@
 	<script type="text/javascript">
 		function ifMinorenne(){
 			var oggi = new Date(Date.now()).getFullYear();
-			var d = document.getElementById("data").value.slice(6, 10);
-			var m = document.getElementsByClassName("min");
-			if(oggi-d < 18){
-				for (var i = m.length - 1; i >= 0; i--) {
-					m[i].disabled = false;
+			var data = document.getElementById("data").value;
+			var a = data.slice(6, 10);
+			var m = data.slice(3, 5);
+			var g = data.slice(0, 2);
+			var min = document.getElementsByClassName("min");
+			if(oggi-a < 18){
+				for (var i = min.length - 1; i >= 0; i--) {
+					min[i].disabled = false;
 				}
 				document.getElementById("minorenne").style.display = "block";
 			}
 			else{
-				for (var i = m.length - 1; i >= 0; i--) {
-					m[i].disabled = true;
+				for (var i = min.length - 1; i >= 0; i--) {
+					min[i].disabled = true;
 				}
 				document.getElementById("minorenne").style.display = "none";
-			}
-		}
-
-		function aprendistato(){
-			var d = document.getElementsByName("liv");
-			var cl = document.getElementsByClassName("lav")[4];
-			var dl = document.getElementById("lav");
-			if(d[0].checked){
-				cl.disabled = false;
-				dl.style.color = "black";
-			}
-			else{
-				cl.disabled = true;
-				dl.style.color = "#CCCCCC";
 			}
 		}
 
@@ -584,6 +565,20 @@
 				}
 				l.style.display = "block";
 				s.style.display = "none";
+			}
+		}
+
+		function aprendistato(){
+			var d = document.getElementsByName("liv");
+			var cl = document.getElementsByClassName("lav")[4];
+			var dl = document.getElementById("lav");
+			if(d[0].checked){
+				cl.disabled = false;
+				dl.style.color = "black";
+			}
+			else{
+				cl.disabled = true;
+				dl.style.color = "#CCCCCC";
 			}
 		}
 	</script>
